@@ -3,8 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+  </style>
 </head>
-  
+<body>
+  <div class="image-container">
+    <img src="images/window.png" alt="Maanvi Chawla headshot" style="max-width: 300px; height: auto;" />
+    <div class="overlay-text">MAANVI CHAWLA</div>
+  </div>
+</body>
 </html>
