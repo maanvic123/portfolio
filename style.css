@@ -11,7 +11,7 @@ body {
 }
 
 .image-container img {
-  width: 1000px; /* Increase this to make the image larger */
+  width: 2000px; /* Increase this to make the image larger */
   height: auto;
 }
 
