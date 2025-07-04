@@ -1,90 +1,107 @@
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
 body {
+  background: #22232b;
+  color: #111;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #d4e6ef;
-  font-family: Helvetica, sans-serif;
-  color: #22222c;
 }
 
-.mockup {
-  position: relative;
-  width: 100%;
-  max-width: 960px;
-  margin: 60px auto;
-  padding: 40px;
-  background-color: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+/* Main container */
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 40px 60px;
+  gap: 60px;
 }
 
-.border {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 0;
+/* Main card styling */
+.main-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  min-width: 500px;
 }
 
-.content {
-  position: relative;
-  z-index: 1;
-  padding-top: 40px;
+.main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 32px;
 }
 
-h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  font-weight: bold;
+/* Profile section */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.profile-img {
+  width: 140px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #ddd;
 }
 
 .info {
-  display: flex;
-  gap: 30px;
-  align-items: center;
+  font-size: 1.15rem;
 }
 
-.headshot {
-  width: 300px;
-  height: auto;
-  border-radius: 4px;
-  object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+.fields {
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 
-.text p {
-  font-size: 20px;
-  margin: 10px 0;
+.university {
+  font-style: italic;
+  color: #444;
 }
 
-.grad {
-  font-weight: bold;
-}
-
+/* Folders */
 .folders {
-  position: absolute;
-  right: 40px;
-  top: 200px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  z-index: 1;
+  gap: 22px;
+  margin-top: 60px;
 }
 
 .folder {
-  text-align: center;
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 28px;
+  background: #e7f0fa;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
 }
 
-.folder img {
-  width: 60px;
-  height: auto;
+.folder.selected {
+  border: 2px solid #6b5cff;
+  background: #e0e7ff;
+  box-shadow: 0 0 0 3px #a5b4fc;
 }
 
+/* Custom cursor (optional) */
 .cursor {
-  position: absolute;
-  bottom: 40px;
-  right: 60px;
-  width: 60px;
-  z-index: 2;
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  background: url('images/CURSOR.png') no-repeat center/contain;
+  pointer-events: none;
+  z-index: 999;
+  display: none; /* Hide by default, show with JS if you want */
 }
+
