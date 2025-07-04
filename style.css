@@ -1,107 +1,49 @@
-/* Reset and base styles */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Arial, sans-serif;
-}
-
 body {
-  background: #22232b;
-  color: #111;
-  min-height: 100vh;
   margin: 0;
   padding: 0;
+  background-image: url('images/landingpage.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  position: relative;
 }
 
-/* Main container */
-.container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 40px 60px;
-  gap: 60px;
+.folder-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* allow clicking only on folders */
 }
 
-/* Main card styling */
-.main-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 40px 32px;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
-  min-width: 500px;
-}
-
-.main-title {
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  margin-bottom: 32px;
-}
-
-/* Profile section */
-.profile-section {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.profile-img {
-  width: 140px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  background: #ddd;
-}
-
-.info {
-  font-size: 1.15rem;
-}
-
-.fields {
-  font-weight: 500;
-  margin-bottom: 8px;
-}
-
-.university {
-  font-style: italic;
-  color: #444;
-}
-
-/* Folders */
-.folders {
+.folder-link {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 22px;
-  margin-top: 60px;
-}
-
-.folder {
-  display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 18px 28px;
-  background: #e7f0fa;
-  border-radius: 8px;
-  font-size: 1.1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  pointer-events: auto;
+}
+
+.folder-link img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 5px;
   cursor: pointer;
-  transition: box-shadow 0.2s;
+  transition: transform 0.2s;
 }
 
-.folder.selected {
-  border: 2px solid #6b5cff;
-  background: #e0e7ff;
-  box-shadow: 0 0 0 3px #a5b4fc;
+.folder-link img:hover {
+  transform: scale(1.05);
 }
 
-/* Custom cursor (optional) */
-.cursor {
-  position: fixed;
-  width: 48px;
-  height: 48px;
-  background: url('images/CURSOR.png') no-repeat center/contain;
-  pointer-events: none;
-  z-index: 999;
-  display: none; /* Hide by default, show with JS if you want */
+.folder-link span {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-align: center;
 }
-
