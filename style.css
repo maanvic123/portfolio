@@ -109,12 +109,3 @@ body {
   .folder-link:hover img {
     transform: scale(1.1);
   }
-
-.page-container {
-  max-width: 1200px; /* or larger like 1400px */
-  margin: 0 auto;
-  padding: 2rem;
-  transform: scale(2); /* increase layout size */
-  transform-origin: top center;
-}
-  
