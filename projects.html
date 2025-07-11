@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="projects-section">
+    <h1 class="projects-heading">PROJECTS</h1>
+    <div class="projects-grid">
+      <div class="project-card" style="background-image: url('images/matchamaticbg.png');" onclick="openModal('matchamatic-modal')">
+      </div>
+      <div class="project-card" style="background-image: url('images/girldinnerbg.png');" onclick="openModal('girldinner-modal')">
+      </div>
+  </section>
+
+  <!-- Matchamatic Modal -->
+  <div id="matchamatic-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2>Matchamatic: Automated Matcha-Making Robot</h2>
+      <p><strong>Skills:</strong> ESP32 (Python, flask), HTML/CSS, Circuit design</p>
+      <p>Programmed ESP32 in Python to control pumps and motors. <br>
+        Implemented stylized UI in HTML/CSS for web-based control of system.<br>
+        Designed and soldered MOSFET switching circuit to enable high-current motor control.<br>
+        3D printed mechanical components for automated whisking. <br>
+        Built and assembled housing.
+      </p>
+      <img src="images/matchamaticfullpic.jpg" alt="Matchamatic Robot" class="modal-image" />
+      <p class="modal-caption">
+        Watch a <a href="https://drive.google.com/file/d/1jpEoTLgCpHdv-3PLXAlPO9w4Lvvtz8BU/view?usp=sharing" target="_blank" rel="noopener noreferrer">demo</a> here!
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+  
+    document.querySelectorAll(".modal-close").forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.closest(".modal").style.display = "none";
+      });
+    });
+  
+    window.addEventListener("click", e => {
+      if (e.target.classList.contains("modal")) {
+        e.target.style.display = "none";
+      }
+    });
+  </script>
+
+  <!-- Girl Dinner Modal -->
+  <div id="girldinner-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2>Girl Dinner: The Game</h2>
+      <p><strong>Skills:</strong> Java, Data structures</p>
+      <p>Built a 2D tile-based world exploration engine in Java. <br>
+        Game mechanics: win/lose states, save/load, visual replay.<br>
+        Interactive features: player input, environment selection, keyboard-driven UI.
+      </p>
+      <img src="images/girldinnerpic.png" alt="Matchamatic Robot" class="modal-image" />
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+  
+    document.querySelectorAll(".modal-close").forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.closest(".modal").style.display = "none";
+      });
+    });
+  
+    window.addEventListener("click", e => {
+      if (e.target.classList.contains("modal")) {
+        e.target.style.display = "none";
+      }
+    });
+  </script>
+
+
+
+
+</body>
+</html>

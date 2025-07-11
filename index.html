@@ -1,0 +1,54 @@
+<!DOCTYPE html>    
+<html lang="en">   <!-- root of HTML doc, language=English -->
+
+<head>                                      <!-- head element = document metadata -->
+  <meta charset="UTF-8" />                    <!-- character encoding, UTF-8 is standard -->
+  <title>My Portfolio</title>                 <!-- webpage title -->
+  <link rel="stylesheet" href="style.css">    <!-- link style.css with href (url) -->
+</head>
+
+<body>  <!-- content of document -->
+  <main class="main-layout">  <!-- main element = main content -->
+    <div class="home-container">
+      <div class="image-container">   <!-- div element = some child section -->
+        <img src="images/window.png" alt="headshot" />    <!-- img element: src (upload file), alt=alternative text -->
+        <img src="images/cursor.jpeg" alt="cursor" class="cursor-overlay" />  <!--  -->
+        <div class="overlay-text">MAANVI CHAWLA</div>
+        <div class="overlay-subtext-majors">
+          Electrical & Computer Engineering,<br />
+          Computer Science,<br />
+          Energy & Environment<br />
+        </div>
+        <div class="overlay-subtext-right">
+          <em>@ Duke University</em>
+        </div>
+      </div>
+  
+      <div class="sidebar">
+        <div class="folder-grid">
+          <a href="about.html" class="folder-link">
+            <img src="images/folder.png" alt="About Me" />
+            <div>About Me</div>
+          </a>
+          <a href="projects.html" class="folder-link">
+            <img src="images/folder.png" alt="Projects" />
+            <div>Projects</div>
+          </a>
+          <a href="experiences.html" class="folder-link">
+            <img src="images/folder.png" alt="Experiences" />
+            <div>Experiences</div>
+          </a>
+          <!--
+          <a href="skills.html" class="folder-link">
+            <img src="images/folder.png" alt="Skills" />
+            <div>Skills</div>
+          </a>
+          -->
+        </div>
+      </div>
+    </div>
+    
+
+  </main>
+</body>
+</html>

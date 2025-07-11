@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiences</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="experiences-section">
+    <h1 class="experiences-heading">EXPERIENCES</h1>
+    <div class="experiences-grid">
+        <div class="experiences-card" style="background-image: url('images/shellogobg.png');" onclick="openModal('shell-modal')">
+        </div>
+        <div class="experiences-card" style="background-image: url('images/siemenslogobg.png');" onclick="openModal('siemens-modal')">
+        </div>
+  </section>
+
+  <!-- Shell Modal -->
+  <div id="shell-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2>Shell: Project Engineering Intern</h2>
+      <p><strong>Dates:</strong> June 2025 – August 2025</p>
+      <p> Leading cross-functional effort to develop a module design guide for a sustainable aviation fuel plant; <br>
+        coordinating 15+ engineering disciplines to deliver a reusable framework for future capital projects. <br>
+        Driving AI adoption in project workflows by leading stakeholder interviews, beta testing internal AI tools, <br>
+        and developing funding proposals for scalable integration into capital project management.
+      </p>
+      <p><strong>Skills:</strong> Project Management</p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+  
+    document.querySelectorAll(".modal-close").forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.closest(".modal").style.display = "none";
+      });
+    });
+  
+    window.addEventListener("click", e => {
+      if (e.target.classList.contains("modal")) {
+        e.target.style.display = "none";
+      }
+    });
+  </script>
+
+  <!-- Siemens Modal -->
+  <div id="siemens-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2>Siemens: eMobility Engineering Intern</h2>
+      <p><strong>Dates:</strong> May 2024 – August 2024</p>
+      <p> Implemented Python algorithm for temperature derating to deploy across Siemens EV charger suite. <br>
+        Scripted automation of component standardization in Altium libraries using DelphiScript.  <br>
+        Designed and built a flexible PCB in Altium to expand pin access on EV simulator, streamlining testing workflows.  <br>
+        Led hardware–software integration for a low-cost residential EV charger intern project. 
+      </p>
+      <p><strong>Skills:</strong> Python, DelphiScript, Altium</p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+  
+    document.querySelectorAll(".modal-close").forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.closest(".modal").style.display = "none";
+      });
+    });
+  
+    window.addEventListener("click", e => {
+      if (e.target.classList.contains("modal")) {
+        e.target.style.display = "none";
+      }
+    });
+  </script>
+
+
+
+
+</body>
+</html>
